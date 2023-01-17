@@ -8,20 +8,3 @@ ribbon:
 
 zuul:
   ignoredServices: '*'
-  routes:
-    website-application:
-      path: /**
-      serviceId: website-application
-      sensitiveHeaders:
-    news-application:
-      path: /news/**
-      serviceId: news-application
-      sensitiveHeaders:
-    admin-application:
-      path: /admin/**
-      serviceId: admin-application
-      sensitiveHeaders:
-
-website-application.ribbon.NFLoadBalancerRuleClassName: com.example.StickySessionRule
-admin-application.ribbon.NFLoadBalancerRuleClassName: com.example.StickySessionRule
-news-application.ribbon.NFLoadBalancerRuleClassName: com.example.StickySessionRule
